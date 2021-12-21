@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+
+
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ /* overflow: hidden; */
+ font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+body {
+ background: url(images/email-pattern.png);
+}
+
+#navbar {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 2rem;
+ 
+
+ 
+}
+
+#navbar-ul {
+ display: flex;
+ align-self: center;
+ position: relative ;
+}
+
+
+
+#navbar-ul a li:hover::before{
+position: absolute;
+content: '';
+background-color: rgb(7, 11, 255);
+width: 20px;
+height: 5px;
+top: 30px;
+animation: 1s ease-in navSlide;
+animation-iteration-count: infinite;
+}
+
+
+
+@keyframes navSlide {
+50%{
+ transform:translateX(20px)
+}
+}
+
+
+
+#navbar-ul a {
+ color: none;
+ text-decoration: none;
+}
+
+#navbar-ul a li {
+ list-style-type: none;
+ padding-right: 5rem;
+ font-size: 1.2rem;
+}
+
+#menu-bar {
+ font-size: 1.5rem;
+ cursor: pointer;
+ display: none;
+}
+
+.logo-nav span p {
+color: blue;
+display: inline;
+font-size: 2rem;
+font-weight: bold;
+}
+
+#navbar button {
+ height: 36px;
+width: 120px;
+border: none;
+font-weight: bold;
+
+border-radius: 28px;
+padding: 10px, 56px, 10px, 56px;
+
+
+ background: #FFFFFF;
+box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.12);
+border-radius: 28px;
+}
+
+.container{
+max-width: 1200px;
+ margin: 0 auto;
+
+}
+
+.hero {
+ margin-top: 7rem;
+}
+
+.hero h4 {
+ color:  rgba(0, 98, 244, 0.6);
+;
+ font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 33px;
+text-transform: uppercase;
+
+/* identical to box height */
+letter-spacing: 0.285em;
+}
+
+
+.hero h1 {
+
+font-weight: bold;
+font-size: 74px;
+line-height: 111px;
+letter-spacing: 0.03em;
+}
+
+
+.hero button {
+ width: 250px;
+height: 45px;
+
+margin-top: 1rem;
+
+background: #2152FF;
+border-radius: 50px;
+border: none;
+color: white;
+font-weight: bold;
+animation: bounceAnimation;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes bounceAnimation {
+ 50%{
+  transform:translateX(20px);
+ }
+}
+
+.hero {
+ display: flex;
+
+ 
+}
+
+@keyframes slideIn {
+ from{
+  left: 900px
+ }
+ to{
+  left: 0;
+ }
+}
+
+@keyframes slideInTwo {
+ from{
+  bottom: 500px;
+ }
+ to{
+bottom: 0;
+ }
+}
+
+
+.flex-item-2 img {
+ position: relative;
+
+ animation: slideIn;
+ animation-duration: 2s;
+ 
+ 
+}
+
+.flex-item-2 img:hover {
+ animation: scaleAnimation ease-in 1s ;
+ animation-iteration-count: initial;
+}
+
+@keyframes scaleAnimation {
+ 0%{
+  transform: scale(1);
+ }
+ 50%{
+  transform:scale(.5);
+ }
+ 100%{
+  transform: scale(1);
+ }
+}
+
+.flex-item {
+ position: relative;
+ animation: slideInTwo;
+ animation-duration: 2s;
+}
+
+.about {
+ 
+ margin-top: 15rem;
+ width: 100%;
+
+ 
+
+}
+
+.about .cards .card {
+ width: 200px;
+height: 250px;
+
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+border-radius: 24px;
+position: relative;
+margin: 0 1rem;
+}
+
+.about .cards .card img {
+ position: absolute;
+width: 112px;
+height: 118px;
+border-radius: 70px;
+
+
+
+
+
+background: url(./images/photo-1557862921-37829c790f19.avif);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#about-paragraph {
+ max-width: 700px;
+ color: white;
+ font-size: 1.5rem;
+ font-weight: bold;
+
+}
+
+#second-image{
+background: url(./images/mohammad-faruque-TwuPHbcQ57w-unsplash.jpg);
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.about .cards {
+ display: flex;
+ background-color: pink;
+ justify-content: space-around;
+ align-items: center;
+ height: 40vh;
+ width: 100%;
+
+}
+
+.about .cards .card {
+ text-align: center;
+ position: relative;
+}
+
+.about .cards .card img {
+position: absolute;
+top: -90px;
+right: 40px;
+box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about .cards .card h3{
+ padding: 3rem 0;
+}
+
+.card-container {
+ display: flex;
+}
+
+.container-two {
+ width: 100%;
+ margin:0 auto;
+ background-color: pink;
+}
+
+.container-three {
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MQ */
+
+@media (max-width:1260px) {
+.hero {
+ flex-direction: column;
+ align-items: center;
+}
+
+.container .hero .flex-item {
+ text-align: center;
+}
+
+#flex-item-img{
+ margin-top: 10rem;
+ margin-bottom: 1rem;
+}
+
+}
+
+@media (max-width:900px) {
+
+ #menu-bar{
+  display: block;
+  align-self: flex-start;
+  justify-self: start;
+  margin-left: 1rem;
+ }
+
+
+ #navbar .container {
+
+
+ }
+ #navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+ }
+ #navbar-ul  {
+  position: absolute;
+  top: 10%;left: -120%;
+  width: 100%;
+  /* border-top: .1rem solid rgba(0,0,0,0.1); */
+  border-bottom: .1rem solid rgba(0,0,0,0.1);;
+  display: block;
+  background-color: #eee;
+ 
+ }
+
+ #navbar-ul.active {
+left: 0;
+
+ }
+  #navbar-ul a li {
+   padding:1rem 0;
+  }
+
+ #navbar button {
+  margin-top:8rem;
+ }
+
+
+ .logo-nav{
+  margin: 4rem 0;
+  z-index: 20;
+ }
+
+ .container .hero {
+
+ text-align: center;
+
+
+}
+
+.container .hero .flex-item {
+ text-align: center;
+}
+
+.hero .flex-item h4 {
+font-size: 1rem;
+padding-bottom: 2rem;
+}
+
+.hero .flex-item h1 {
+ font-size: 3rem;
+ line-height: 3rem;
+ padding-bottom: 2rem;
+}
+
+.flex-item-2 img {
+ height: 400px;
+}
+
+.about .cards {
+
+}
+.about .cards .card-container {
+ flex-direction: column;
+}
+
+.about .cards .card-container .card{
+ margin:2rem 0;
+}
+.about .cards .card-container .card img {
+height: 60px;
+border-radius: 20px;
+position: static;
+
+}
+
+#about-paragraph {
+ text-align: center;
+ max-width: 300px;
+ font-size: 1rem;
+}
+
+
+
+}
